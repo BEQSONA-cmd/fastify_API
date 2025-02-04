@@ -8,6 +8,7 @@ import loginRoutes from "./api/login";
 import adminRoutes from "./api/admin";
 import meRoutes from "./api/me";
 import buyRoutes from "./api/buy";
+import productRoutes from "./api/product";
 
 const fastify = Fastify({ logger: false });
 
@@ -23,6 +24,8 @@ fastify.register(loginRoutes);
 fastify.register(meRoutes);
 fastify.register(adminRoutes);
 fastify.register(buyRoutes);
+fastify.register(productRoutes);
+
 fastify.register(cookie);
 
 const startServer = async () => 

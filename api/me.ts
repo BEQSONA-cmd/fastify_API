@@ -12,7 +12,6 @@ export default async function meRoutes(fastify: FastifyInstance)
         const token = authHeader?.split(" ")[1];
         
         if (!token) {
-            console.log("meRoutes");
             return res.code(401).send({ message: "Unauthorized" });
         }
 
